@@ -9,8 +9,8 @@
 ## 2. SOURCE FILES
 - README.md
 - Main.cpp
-- See.h
-- See.cpp
+- SeeSaw.h
+- SeeSaw.cpp
 
 ## 3. REFERENCES
 - [text goes here](link goes here)
