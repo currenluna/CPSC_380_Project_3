@@ -10,6 +10,7 @@
 int main(int argc, char* argv[]) {
 
   SeeSaw* s = new SeeSaw();
+  s->RunSimulation();
 
   // // Check for file input
   // if (argc > 1) {
