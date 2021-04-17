@@ -13,6 +13,9 @@ using namespace std;
 // Number of runs
 #define ITERATION_COUNT 10
 
+#define SEM_FRED_NAME "fred"
+#define SEM_WILMA_NAME "wilma"
+
 class SeeSaw {
   public:
     SeeSaw(); // Constructor
