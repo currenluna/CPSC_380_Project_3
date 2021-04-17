@@ -22,11 +22,19 @@ void* SeeSaw::FredSee(void* arg) {
   for (int i = 0; i < ITERATION_COUNT; i++) {
     // Critical Section
     sem_wait(semWilma);
-    cout << "Fred's turn" << endl;
-    sem_post(semFred);
-    usleep(1000000); // Sleep for 1 second
-  }
+    cout << "Fred's height : " << fredsHeight << " ";
+    if (fredsTurn && wilmasHeight > 1) {
+      fredsHeight += 1;
+    } else if (!fredsTurn && fredsHeight > 1) {
+      fredsHeight -= 1.5;
+    }
+    if (wilmasHeight == 1) {
+      fredsTurn = false;
+    }
 
+    sem_post(semFred);
+    //usleep(1000000); // Sleep for 1 second
+  }
   pthread_exit(0);
 }
 
@@ -37,9 +45,19 @@ void* SeeSaw::WilmaSaw(void* arg) {
   for (int i = 0; i < ITERATION_COUNT; i++) {
     // Critical Section
     sem_wait(semFred);
-    cout << "Wilma's turn" << endl;
+    cout << "Wilma's height : " << wilmasHeight << " " << endl;
+    if (fredsTurn && wilmasHeight > 1) {
+      wilmasHeight -= 1;
+    } else if (!fredsTurn && fredsHeight > 1) {
+      wilmasHeight += 1.5;
+    }
+    if (fredsHeight == 1) {
+      fredsTurn = true;
+    }
+
+
     sem_post(semWilma);
-    usleep(1000000); // Sleep for 1 second
+    //usleep(1000000); // Sleep for 1 second
   }
 
   pthread_exit(0);
