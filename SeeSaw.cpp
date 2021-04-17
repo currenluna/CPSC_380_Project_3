@@ -6,13 +6,11 @@
  * Project 3: See-Saw Simulator
  */
 
-const char* turnName = "turn";
-const char* heightName = "height";
-
-sem_t* turn;
-sem_t* height;
-
+sem_t* semFred;
+sem_t* semWilma;
 bool fredsTurn = true;
+double fredsHeight = 1;
+double wilmasHeight = 7;
 
 // Constructor
 SeeSaw::SeeSaw() {}
@@ -23,9 +21,9 @@ void* SeeSaw::FredSee(void* arg) {
   // TODO: Manage Fred's height and print current height
   for (int i = 0; i < ITERATION_COUNT; i++) {
     // Critical Section
-    sem_wait(turn);
+    sem_wait(semWilma);
     cout << "Fred's turn" << endl;
-    sem_post(turn);
+    sem_post(semFred);
     usleep(1000000); // Sleep for 1 second
   }
 
@@ -38,9 +36,9 @@ void* SeeSaw::WilmaSaw(void* arg) {
   // TODO: Manage Wilma's height and print current height
   for (int i = 0; i < ITERATION_COUNT; i++) {
     // Critical Section
-    sem_wait(turn);
+    sem_wait(semFred);
     cout << "Wilma's turn" << endl;
-    sem_post(turn);
+    sem_post(semWilma);
     usleep(1000000); // Sleep for 1 second
   }
 
@@ -50,17 +48,19 @@ void* SeeSaw::WilmaSaw(void* arg) {
 // Runs the See-Saw Simulation
 void SeeSaw::RunSimulation() {
 
-  sem_unlink(turnName);
-  turn = sem_open(turnName, O_CREAT, 0777, 1);
-  if (turn == SEM_FAILED) {
-    cout << "Failed to open semaphore for turn" << endl;
+
+
+  sem_unlink(SEM_FRED_NAME);
+  semFred = sem_open(SEM_FRED_NAME, O_CREAT, 0777, 0);
+  if (semFred == SEM_FAILED) {
+    cout << "Failed to open semaphore for Fred" << endl;
     exit(-1);
   }
 
-  sem_unlink(heightName);
-  height = sem_open(heightName, O_CREAT, 0777, 10);
-  if (turn == SEM_FAILED) {
-    cout << "Failed to open semaphore for height" << endl;
+  sem_unlink(SEM_WILMA_NAME);
+  semWilma = sem_open(SEM_WILMA_NAME, O_CREAT, 0777, 1);
+  if (semWilma == SEM_FAILED) {
+    cout << "Failed to open semaphore for Wilma" << endl;
     exit(-1);
   }
 
@@ -75,5 +75,6 @@ void SeeSaw::RunSimulation() {
   pthread_join(tid_fred, NULL);
   pthread_join(tid_wilma, NULL);
 
-  sem_close(turn);
+  sem_close(semFred);
+  sem_close(semWilma);
 }
