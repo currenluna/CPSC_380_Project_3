@@ -34,7 +34,7 @@ void* SeeSaw::FredSee(void* arg) {
     }
 
     if (i >= 0 && fredsHeight > 0) {
-      cout << "Fred's height : " << fredsHeight << " ";
+      cout << "Fred's height: " << fredsHeight << ", ";
     }
 
     if (fredsTurn && fredsHeight < 7) {
@@ -44,7 +44,7 @@ void* SeeSaw::FredSee(void* arg) {
     }
 
     sem_post(semFred);
-    usleep(1000000); // Added delay
+    //usleep(1000000); // Added delay
   }
   pthread_exit(0);
 }
@@ -67,7 +67,7 @@ void* SeeSaw::WilmaSaw(void* arg) {
     }
 
     if (i >= 0 && wilmasHeight < 8) {
-      cout << "Wilma's height : " << wilmasHeight << " " << endl;
+      cout << "Wilma's height: " << wilmasHeight << endl;
     }
 
     if (fredsTurn && wilmasHeight > 1) {
@@ -77,7 +77,7 @@ void* SeeSaw::WilmaSaw(void* arg) {
     }
 
     sem_post(semWilma);
-    usleep(1000000); // Added delay
+    //usleep(1000000); // Added delay
   }
   pthread_exit(0);
 }
