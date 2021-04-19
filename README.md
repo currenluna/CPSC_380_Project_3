@@ -12,6 +12,10 @@
 - SeeSaw.h
 - SeeSaw.cpp
 
+## 3. DESCRIPTION
+
+When Main.cpp runs, it creates a SeeSaw pointer and calls RunSimulation() on the new SeeSaw object. Upon creation, the SeeSaw object initializes two binary semaphores (semFred and semWilma), a Boolean (fredsTurn), two doubles for height (fredsHeight and wilmasHeight), and an integer for tracking the current round (i). The RunSimulation() method starts by unlinking and creating the two semaphores, with semFred set to 0 and semWilma set to 1 (this allows Fred to run first since he calls sem_wait() on semWilma). Then, RunSimulation creates two child threads named tid_fred and tid_wilma, which run the functions FredSee() and WilmaSaw() respectively. Both FredSee() and WilmaSaw() call sem_wait() on the opposite person’s semaphore, execute the critical section, then call sem_post() on their own semaphore. In the critical section, each thread checks if fredsHeight is 1 and wilmasHeight is 7, or vice versa. If this condition is met, then the fredsTurn changes its value and indicates the current person pushing the see-saw (fredsTurn = true means Fred pushes the see-saw). Fred pushes with an upward velocity of 1 ft/s, whereas Wilma pushes with an upward velocity of 1.5 ft/s. FredSee() and WilmaSaw update the heights of Fred and Wilma, printing their current height every second. Once the simulation finishes ITERATION_COUNT rounds, then tid_fred and tid_wilma join with their parent thread and the program finishes.
+
 ## 3. REFERENCES
 - [Semaphore Tutorial](https://youtu.be/ukM_zzrIeXs)
 - [Semaphore Documentation](https://pubs.opengroup.org/onlinepubs/7908799/xsh/semaphore.h.html)
