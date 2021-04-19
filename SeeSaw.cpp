@@ -6,15 +6,15 @@
  * Project 3: See-Saw Simulator
  */
 
-sem_t* semFred;
-sem_t* semWilma;
-bool fredsTurn = true;
-double fredsHeight = 0;
-double wilmasHeight = 8;
-int i = ITERATION_COUNT;
-
 // Constructor
-SeeSaw::SeeSaw() {}
+SeeSaw::SeeSaw() {
+  sem_t* semFred;
+  sem_t* semWilma;
+  bool fredsTurn = true;
+  double fredsHeight = 0;
+  double wilmasHeight = 8;
+  int i = ITERATION_COUNT;
+}
 
 // Updates and prints Fred's height
 void* SeeSaw::FredSee(void* arg) {
@@ -34,7 +34,7 @@ void* SeeSaw::FredSee(void* arg) {
     }
 
     if (i >= 0 && fredsHeight > 0) {
-      cout << "Fred's height : " << fredsHeight << " ";
+      cout << "Fred's height: " << fredsHeight << ", ";
     }
 
     if (fredsTurn && fredsHeight < 7) {
@@ -67,7 +67,7 @@ void* SeeSaw::WilmaSaw(void* arg) {
     }
 
     if (i >= 0 && wilmasHeight < 8) {
-      cout << "Wilma's height : " << wilmasHeight << " " << endl;
+      cout << "Wilma's height: " << wilmasHeight << endl;
     }
 
     if (fredsTurn && wilmasHeight > 1) {

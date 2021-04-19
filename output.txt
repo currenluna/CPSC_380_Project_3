@@ -1,0 +1,131 @@
+SIMULATION START
+
+CURRENT ROUND: 1
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 2
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 3
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 4
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 5
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 6
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 7
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 8
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 9
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
+
+CURRENT ROUND: 10
+
+Fred's height: 1, Wilma's height: 7
+Fred's height: 2, Wilma's height: 6
+Fred's height: 3, Wilma's height: 5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 5, Wilma's height: 3
+Fred's height: 6, Wilma's height: 2
+Fred's height: 7, Wilma's height: 1
+Fred's height: 5.5, Wilma's height: 2.5
+Fred's height: 4, Wilma's height: 4
+Fred's height: 2.5, Wilma's height: 5.5
