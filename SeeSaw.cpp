@@ -6,14 +6,16 @@
  * Project 3: See-Saw Simulator
  */
 
+ sem_t* semFred;
+ sem_t* semWilma;
+ bool fredsTurn = true;
+ double fredsHeight = 0;
+ double wilmasHeight = 8;
+ int i = ITERATION_COUNT;
+
 // Constructor
 SeeSaw::SeeSaw() {
-  sem_t* semFred;
-  sem_t* semWilma;
-  bool fredsTurn = true;
-  double fredsHeight = 0;
-  double wilmasHeight = 8;
-  int i = ITERATION_COUNT;
+
 }
 
 // Updates and prints Fred's height
